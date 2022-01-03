@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B5452A92734A4C8002E5859 /* ApodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5452A82734A4C8002E5859 /* ApodView.swift */; };
+		5B5452AC2734C1AF002E5859 /* ApodDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5452AB2734C1AF002E5859 /* ApodDataService.swift */; };
+		5B631AC427347D9D00762D27 /* Space_HubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631AC327347D9D00762D27 /* Space_HubApp.swift */; };
+		5B631AC827347DA000762D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B631AC727347DA000762D27 /* Assets.xcassets */; };
+		5B631ACB27347DA000762D27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B631ACA27347DA000762D27 /* Preview Assets.xcassets */; };
+		5B631AD3273480B700762D27 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631AD2273480B700762D27 /* Color.swift */; };
+		5B631AD92734827700762D27 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631AD82734827700762D27 /* HomeView.swift */; };
+		5B657F3F2734CF4200A7BE71 /* ApodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B657F3E2734CF4100A7BE71 /* ApodModel.swift */; };
+		5B6BDDC8274DAFA800058226 /* ISSLocationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BDDC7274DAFA800058226 /* ISSLocationModels.swift */; };
+		5B6BDDCA274DB4D600058226 /* ISSLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BDDC9274DB4D600058226 /* ISSLocationViewModel.swift */; };
+		5B6BDDCC274DBCAC00058226 /* ISSLocationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BDDCB274DBCAC00058226 /* ISSLocationDataService.swift */; };
+		5B7C979B2734F790002F7CD2 /* ApodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7C979A2734F790002F7CD2 /* ApodViewModel.swift */; };
+		5B810FE9276B8A38008E2DDD /* SpaceNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B810FE8276B8A38008E2DDD /* SpaceNewsModel.swift */; };
+		5B810FEB276B8C7B008E2DDD /* SpaceNewsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B810FEA276B8C7B008E2DDD /* SpaceNewsDataService.swift */; };
+		5BA45DFB276B934D008C7318 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA45DFA276B934D008C7318 /* HomeViewModel.swift */; };
+		5BA45E00276B937A008C7318 /* SpaceNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA45DFF276B937A008C7318 /* SpaceNewsView.swift */; };
+		5BA45E02276B9386008C7318 /* SpaceNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA45E01276B9386008C7318 /* SpaceNewsViewModel.swift */; };
+		5BA45E04276B98C4008C7318 /* SpaceNewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA45E03276B98C4008C7318 /* SpaceNewsRow.swift */; };
+		5BACD015274B92BF00305B24 /* ISSLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BACD014274B92BF00305B24 /* ISSLocationView.swift */; };
+		5BFD38842738C61A00ABECFF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD38832738C61A00ABECFF /* NetworkingManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B5452A82734A4C8002E5859 /* ApodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodView.swift; sourceTree = "<group>"; };
+		5B5452AB2734C1AF002E5859 /* ApodDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodDataService.swift; sourceTree = "<group>"; };
+		5B631AC027347D9D00762D27 /* Space Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B631AC327347D9D00762D27 /* Space_HubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_HubApp.swift; sourceTree = "<group>"; };
+		5B631AC727347DA000762D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B631ACA27347DA000762D27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B631AD2273480B700762D27 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5B631AD82734827700762D27 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5B657F3E2734CF4100A7BE71 /* ApodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodModel.swift; sourceTree = "<group>"; };
+		5B6BDDC7274DAFA800058226 /* ISSLocationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSLocationModels.swift; sourceTree = "<group>"; };
+		5B6BDDC9274DB4D600058226 /* ISSLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSLocationViewModel.swift; sourceTree = "<group>"; };
+		5B6BDDCB274DBCAC00058226 /* ISSLocationDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ISSLocationDataService.swift; path = ../../../../Downloads/ISSLocationDataService.swift; sourceTree = "<group>"; };
+		5B7C979A2734F790002F7CD2 /* ApodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodViewModel.swift; sourceTree = "<group>"; };
+		5B810FE8276B8A38008E2DDD /* SpaceNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsModel.swift; sourceTree = "<group>"; };
+		5B810FEA276B8C7B008E2DDD /* SpaceNewsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsDataService.swift; sourceTree = "<group>"; };
+		5BA45DFA276B934D008C7318 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5BA45DFF276B937A008C7318 /* SpaceNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsView.swift; sourceTree = "<group>"; };
+		5BA45E01276B9386008C7318 /* SpaceNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsViewModel.swift; sourceTree = "<group>"; };
+		5BA45E03276B98C4008C7318 /* SpaceNewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsRow.swift; sourceTree = "<group>"; };
+		5BACD014274B92BF00305B24 /* ISSLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSLocationView.swift; sourceTree = "<group>"; };
+		5BFD38832738C61A00ABECFF /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B631ABD27347D9D00762D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B071127276B890200D3B981 /* ISS Location */ = {
+			isa = PBXGroup;
+			children = (
+				5B071129276B892E00D3B981 /* Views */,
+				5B071128276B891100D3B981 /* ViewModels */,
+			);
+			path = "ISS Location";
+			sourceTree = "<group>";
+		};
+		5B071128276B891100D3B981 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5B6BDDC9274DB4D600058226 /* ISSLocationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5B071129276B892E00D3B981 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BACD014274B92BF00305B24 /* ISSLocationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B5452AA2734BDAB002E5859 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5B5452AB2734C1AF002E5859 /* ApodDataService.swift */,
+				5B6BDDCB274DBCAC00058226 /* ISSLocationDataService.swift */,
+				5B810FEA276B8C7B008E2DDD /* SpaceNewsDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5B5452AD2734C40D002E5859 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B657F3E2734CF4100A7BE71 /* ApodModel.swift */,
+				5B6BDDC7274DAFA800058226 /* ISSLocationModels.swift */,
+				5B810FE8276B8A38008E2DDD /* SpaceNewsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5B631AB727347D9D00762D27 = {
+			isa = PBXGroup;
+			children = (
+				5B631AC227347D9D00762D27 /* Space Hub */,
+				5B631AC127347D9D00762D27 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B631AC127347D9D00762D27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B631AC027347D9D00762D27 /* Space Hub.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B631AC227347D9D00762D27 /* Space Hub */ = {
+			isa = PBXGroup;
+			children = (
+				5B631AC327347D9D00762D27 /* Space_HubApp.swift */,
+				5BFD38822738C5FD00ABECFF /* Utilities */,
+				5B5452AD2734C40D002E5859 /* Models */,
+				5B5452AA2734BDAB002E5859 /* Services */,
+				5B631AD127347DBC00762D27 /* Extensions */,
+				5B631AD42734823100762D27 /* Core */,
+				5B631AC727347DA000762D27 /* Assets.xcassets */,
+				5B631AC927347DA000762D27 /* Preview Content */,
+			);
+			path = "Space Hub";
+			sourceTree = "<group>";
+		};
+		5B631AC927347DA000762D27 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5B631ACA27347DA000762D27 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5B631AD127347DBC00762D27 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5B631AD2273480B700762D27 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5B631AD42734823100762D27 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5BA45DFC276B9361008C7318 /* Space News */,
+				5B071127276B890200D3B981 /* ISS Location */,
+				5B631ADD2734A35700762D27 /* APOD */,
+				5B631ADA2734830800762D27 /* Components */,
+				5B631AD52734824800762D27 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5B631AD52734824800762D27 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B631AD72734825F00762D27 /* ViewModels */,
+				5B631AD62734825800762D27 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B631AD62734825800762D27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B631AD82734827700762D27 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B631AD72734825F00762D27 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5BA45DFA276B934D008C7318 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5B631ADA2734830800762D27 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5B631ADD2734A35700762D27 /* APOD */ = {
+			isa = PBXGroup;
+			children = (
+				5B631ADE2734A36E00762D27 /* Views */,
+				5B631ADF2734A37A00762D27 /* ViewModels */,
+			);
+			path = APOD;
+			sourceTree = "<group>";
+		};
+		5B631ADE2734A36E00762D27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B5452A82734A4C8002E5859 /* ApodView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B631ADF2734A37A00762D27 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5B7C979A2734F790002F7CD2 /* ApodViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5BA45DFC276B9361008C7318 /* Space News */ = {
+			isa = PBXGroup;
+			children = (
+				5BA45DFE276B936E008C7318 /* Views */,
+				5BA45DFD276B9369008C7318 /* ViewModels */,
+			);
+			path = "Space News";
+			sourceTree = "<group>";
+		};
+		5BA45DFD276B9369008C7318 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5BA45E01276B9386008C7318 /* SpaceNewsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5BA45DFE276B936E008C7318 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BA45DFF276B937A008C7318 /* SpaceNewsView.swift */,
+				5BA45E03276B98C4008C7318 /* SpaceNewsRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BFD38822738C5FD00ABECFF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5BFD38832738C61A00ABECFF /* NetworkingManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B631ABF27347D9D00762D27 /* Space Hub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B631ACE27347DA000762D27 /* Build configuration list for PBXNativeTarget "Space Hub" */;
+			buildPhases = (
+				5B631ABC27347D9D00762D27 /* Sources */,
+				5B631ABD27347D9D00762D27 /* Frameworks */,
+				5B631ABE27347D9D00762D27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Space Hub";
+			productName = "Space Hub";
+			productReference = 5B631AC027347D9D00762D27 /* Space Hub.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B631AB827347D9D00762D27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					5B631ABF27347D9D00762D27 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 5B631ABB27347D9D00762D27 /* Build configuration list for PBXProject "Space Hub" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B631AB727347D9D00762D27;
+			productRefGroup = 5B631AC127347D9D00762D27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B631ABF27347D9D00762D27 /* Space Hub */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B631ABE27347D9D00762D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B631ACB27347DA000762D27 /* Preview Assets.xcassets in Resources */,
+				5B631AC827347DA000762D27 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B631ABC27347D9D00762D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B6BDDC8274DAFA800058226 /* ISSLocationModels.swift in Sources */,
+				5B5452AC2734C1AF002E5859 /* ApodDataService.swift in Sources */,
+				5BA45E00276B937A008C7318 /* SpaceNewsView.swift in Sources */,
+				5BA45E02276B9386008C7318 /* SpaceNewsViewModel.swift in Sources */,
+				5B810FE9276B8A38008E2DDD /* SpaceNewsModel.swift in Sources */,
+				5B6BDDCC274DBCAC00058226 /* ISSLocationDataService.swift in Sources */,
+				5BA45E04276B98C4008C7318 /* SpaceNewsRow.swift in Sources */,
+				5B7C979B2734F790002F7CD2 /* ApodViewModel.swift in Sources */,
+				5B5452A92734A4C8002E5859 /* ApodView.swift in Sources */,
+				5B631AD92734827700762D27 /* HomeView.swift in Sources */,
+				5B657F3F2734CF4200A7BE71 /* ApodModel.swift in Sources */,
+				5B6BDDCA274DB4D600058226 /* ISSLocationViewModel.swift in Sources */,
+				5BACD015274B92BF00305B24 /* ISSLocationView.swift in Sources */,
+				5BFD38842738C61A00ABECFF /* NetworkingManager.swift in Sources */,
+				5B631AC427347D9D00762D27 /* Space_HubApp.swift in Sources */,
+				5B631AD3273480B700762D27 /* Color.swift in Sources */,
+				5BA45DFB276B934D008C7318 /* HomeViewModel.swift in Sources */,
+				5B810FEB276B8C7B008E2DDD /* SpaceNewsDataService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5B631ACC27347DA000762D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B631ACD27347DA000762D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B631ACF27347DA000762D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Space Hub/Preview Content\"";
+				DEVELOPMENT_TEAM = AB9NJB278K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jungwon.Space-Hub";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B631AD027347DA000762D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Space Hub/Preview Content\"";
+				DEVELOPMENT_TEAM = AB9NJB278K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jungwon.Space-Hub";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B631ABB27347D9D00762D27 /* Build configuration list for PBXProject "Space Hub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B631ACC27347DA000762D27 /* Debug */,
+				5B631ACD27347DA000762D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B631ACE27347DA000762D27 /* Build configuration list for PBXNativeTarget "Space Hub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B631ACF27347DA000762D27 /* Debug */,
+				5B631AD027347DA000762D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B631AB827347D9D00762D27 /* Project object */;
+}
