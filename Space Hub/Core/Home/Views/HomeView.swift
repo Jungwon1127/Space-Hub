@@ -15,27 +15,45 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             // Content Layer
-            VStack{
-                List {
-                    
-                    NavigationLink("APOD") {
-                        ApodView()
-                            .navigationBarTitleDisplayMode(.inline)
-                    }
-                    
-                    NavigationLink("ISS Location") {
-                        ISSLocationView()
-                            .navigationBarTitleDisplayMode(.inline)
-                    }
-                    
-                    NavigationLink("NEWS") {
-                        SpaceNewsView()
-                            .navigationBarTitleDisplayMode(.inline)
-                    }
-                }
-                .listStyle(.grouped)
+            VStack(alignment: .leading) {
+                Text("Space Hub")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+
                 
+                Text("NEWS")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                
+                Spacer()
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding()
+            
+            
+            
+            
+//            VStack{
+//                List {
+//
+//                    NavigationLink("APOD") {
+//                        ApodView()
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    }
+//
+//                    NavigationLink("ISS Location") {
+//                        ISSLocationView()
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    }
+//
+//                    NavigationLink("NEWS") {
+//                        SpaceNewsView()
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    }
+//                }
+//                .listStyle(.grouped)
+//            }
+            
         }
     }
 }
@@ -46,6 +64,7 @@ struct HomeView_Previews: PreviewProvider {
         NavigationView{
             HomeView()
                 .navigationBarHidden(true)
+                .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
         }
     }
 }

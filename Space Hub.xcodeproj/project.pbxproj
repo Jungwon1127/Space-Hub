@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1541442784224600F5032A /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1541432784224600F5032A /* WeatherModel.swift */; };
 		5B5452A92734A4C8002E5859 /* ApodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5452A82734A4C8002E5859 /* ApodView.swift */; };
 		5B5452AC2734C1AF002E5859 /* ApodDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5452AB2734C1AF002E5859 /* ApodDataService.swift */; };
 		5B631AC427347D9D00762D27 /* Space_HubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631AC327347D9D00762D27 /* Space_HubApp.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B1541432784224600F5032A /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		5B5452A82734A4C8002E5859 /* ApodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodView.swift; sourceTree = "<group>"; };
 		5B5452AB2734C1AF002E5859 /* ApodDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodDataService.swift; sourceTree = "<group>"; };
 		5B631AC027347D9D00762D27 /* Space Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				5B657F3E2734CF4100A7BE71 /* ApodModel.swift */,
+				5B1541432784224600F5032A /* WeatherModel.swift */,
 				5B6BDDC7274DAFA800058226 /* ISSLocationModels.swift */,
 				5B810FE8276B8A38008E2DDD /* SpaceNewsModel.swift */,
 			);
@@ -340,6 +343,7 @@
 				5B5452A92734A4C8002E5859 /* ApodView.swift in Sources */,
 				5B631AD92734827700762D27 /* HomeView.swift in Sources */,
 				5B657F3F2734CF4200A7BE71 /* ApodModel.swift in Sources */,
+				5B1541442784224600F5032A /* WeatherModel.swift in Sources */,
 				5B6BDDCA274DB4D600058226 /* ISSLocationViewModel.swift in Sources */,
 				5BACD015274B92BF00305B24 /* ISSLocationView.swift in Sources */,
 				5BFD38842738C61A00ABECFF /* NetworkingManager.swift in Sources */,
