@@ -18,7 +18,19 @@ struct CurrentConditions: Codable {
     let precip: Double
     let conditions: String
     let icon: String
-    let moonphase: Int
+    let moonphase: Double
     let sunrise: String
     let sunset: String
+    
+    enum CodingKeys: String, CodingKey {
+        case dateTime = "datetime"
+        case temp
+        case humidity
+        case precip
+        case conditions
+        case icon
+        case moonphase
+        case sunrise
+        case sunset
+    }
 }

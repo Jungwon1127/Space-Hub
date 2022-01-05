@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var vm = HomeViewModel()
+    @State var farenheight = true
+    
     var body: some View {
         ZStack {
             // Background layer
@@ -15,19 +18,25 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             // Content Layer
-            VStack(alignment: .leading) {
-                Text("Space Hub")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-
+            VStack(alignment: .center) {
+                Text("On \(Date(), style: .date), it is...")
+                    .font(.headline)
+                    
                 
-                Text("NEWS")
-                    .font(.title)
-                    .fontWeight(.semibold)
+                HStack {
+                    Image(systemName: "moon")
+                    Text("\(farenheight ? (vm.currentConditions.temp * 9/5 + 32) : vm.currentConditions.temp, specifier: "%.1f")")
+                }
+                
+                Button(action: {
+                    farenheight.toggle()
+                }) {
+                    Text("Hello!")
+                }
                 
                 Spacer()
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity)
             .padding()
             
             
@@ -54,6 +63,9 @@ struct HomeView: View {
 //                .listStyle(.grouped)
 //            }
             
+        }
+        .onAppear {
+            vm.fetchData()
         }
     }
 }
