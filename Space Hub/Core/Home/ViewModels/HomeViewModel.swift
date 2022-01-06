@@ -70,7 +70,7 @@ class HomeViewModel: ObservableObject {
         let dfin = DateFormatter()
         let dfout = DateFormatter()
         dfin.dateFormat = "HH:mm:ss"
-        dfout.dateFormat = "hh:mm"
+        dfout.dateFormat = "hh:mm a"
         let time = dfin.date(from: time) ?? Calendar.current.date(from: DateComponents(year: 0000, month: 0, day: 0))!
         let timeString = dfout.string(from: time)
         

@@ -31,10 +31,10 @@ struct SpaceNewsRow: View {
             .font(.body.weight(.bold))
             .frame(maxWidth: .infinity, maxHeight: 50, alignment: .leading)
             .padding(.horizontal)
-            .background(Color.black.opacity(0.8))
+            .background(Color.theme.backgroundTextColor.opacity(0.8))
         }
         .overlay(RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(.white)
+                    .strokeBorder(Color.primary)
         )
         .onTapGesture {
             UIApplication.shared.open(URL(string: spaceNews.url)!)

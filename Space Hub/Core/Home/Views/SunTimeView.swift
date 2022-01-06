@@ -7,16 +7,20 @@
 
 import SwiftUI
 
-struct IconTimeView: View {
+struct SunTimeView: View {
     let icon: String
     let time: String
+    let string: String
     
     var body: some View {
         VStack(alignment: .center) {
+            
+            Text(time)
+                .font(.headline)
             Image(systemName: icon)
                 .font(.headline)
                 .foregroundColor(.yellow)
-            Text(time)
+            Text(string)
                 .font(.headline)
         }
     }
@@ -24,6 +28,6 @@ struct IconTimeView: View {
 
 struct IconTimeView_Previews: PreviewProvider {
     static var previews: some View {
-        IconTimeView(icon: "sunrise", time: "4:43")
+        SunTimeView(icon: "sunrise", time: "4:43AM", string: "Sunrise")
     }
 }

@@ -12,103 +12,59 @@ struct HomeView: View {
     @State var farenheight = true
     
     var body: some View {
-        ZStack {
-            // Background layer
-            Color.theme.background
-                .ignoresSafeArea()
-            
-            // Content Layer
-            VStack(alignment: .center) {
-                Text("On \(Date(), style: .date), it is...")
-                    .font(.headline)
+        TabView {
+            ZStack {
+                // Background layer
+                Color.theme.background
+                    .ignoresSafeArea()
                 
-                HStack {
-
-                    VStack(alignment: .center) {
-                        FullMoonView()
-                            .frame(width: 80)
-
-                        Text(vm.getMoonPhase())
-                            .minimumScaleFactor(0.5)
-                            .frame(width: 80, height: 20)
-                            .multilineTextAlignment(.center)
-                            .font(.headline)
-                    }
-                    .frame(height: 100)
-
-                    Spacer()
-
-
-                    VStack {
-                        Text("\(vm.getTemperature(farenheight: farenheight))")
-                            .font(.system(size: 40))
-
-
-                        Text(vm.currentConditions.conditions)
-                            .font(.headline)
-                    }
-                    .frame(height: 100)
-                }
-                .frame(width: 250, height: 100)
-                .padding()
-                
-                ZStack {
-                    Color.gray
+                // Content Layer
+                VStack(alignment: .center) {
+                    Text("On \(Date(), style: .date), it is...")
+                        .font(.headline)
                     
                     HStack {
-                        Spacer()
-                        
-                        Text("Sunrise:")
-                            .font(.headline)
-                        IconTimeView(icon: "sunrise.fill", time: vm.formatTime(time: vm.currentConditions.sunrise))
-                        
-                        Spacer()
-                        
-                        Text("Sunset:")
-                        IconTimeView(icon: "sunset.fill", time: vm.formatTime(time: vm.currentConditions.sunset))
-                        
+
+                        MoonView(moonPhase: vm.getMoonPhase())
+
                         Spacer()
 
+                        TemperatureView(temperature: vm.getTemperature(farenheight: farenheight), condition: vm.currentConditions.conditions)
+                        
                     }
+                    .frame(width: 250, height: 100)
+                    .padding()
+                    
+                    SunTimeBar(sunrise: vm.formatTime(time: vm.currentConditions.sunrise), sunset: vm.formatTime(time: vm.currentConditions.sunset))
+                    
+                    Spacer()
+                    
                 }
-                .frame(height: 80)
-                .cornerRadius(10)
-                
-                
-                
-                Spacer()
+                .frame(maxWidth: .infinity)
+                .padding()
                 
             }
-            .frame(maxWidth: .infinity)
-            .padding()
+            .onAppear {
+                vm.fetchData()
+            }
+            .tabItem {
+                Label("Home", systemImage: "house")
+            }
             
+            ApodView()
+                .tabItem {
+                    Label("Other", systemImage: "circle")
+                }
             
+            ISSLocationView()
+                .tabItem {
+                    Label("ISS", systemImage: "house")
+                }
             
-            
-//            VStack{
-//                List {
-//
-//                    NavigationLink("APOD") {
-//                        ApodView()
-//                            .navigationBarTitleDisplayMode(.inline)
-//                    }
-//
-//                    NavigationLink("ISS Location") {
-//                        ISSLocationView()
-//                            .navigationBarTitleDisplayMode(.inline)
-//                    }
-//
-//                    NavigationLink("NEWS") {
-//                        SpaceNewsView()
-//                            .navigationBarTitleDisplayMode(.inline)
-//                    }
-//                }
-//                .listStyle(.grouped)
-//            }
-            
-        }
-        .onAppear {
-            vm.fetchData()
+            SpaceNewsView()
+                .tabItem {
+                    Label("News", systemImage: "newspaper")
+                }
         }
     }
 }
