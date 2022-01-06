@@ -35,6 +35,11 @@ struct HomeView: View {
                     .frame(width: 250, height: 100)
                     .padding()
                     
+                    Text("\(vm.currentConditions.conditions) skys tonight with clouds covering \(vm.currentConditions.cloudCover.removeZerosFromEnd())% of the sky, \(vm.stargazingString())")
+                        .fontWeight(.medium)
+                        .padding()
+                        .multilineTextAlignment(.center)
+                    
                     SunTimeBar(sunrise: vm.formatTime(time: vm.currentConditions.sunrise), sunset: vm.formatTime(time: vm.currentConditions.sunset))
                     
                     Spacer()
@@ -51,14 +56,9 @@ struct HomeView: View {
                 Label("Home", systemImage: "house")
             }
             
-            ApodView()
+            SpaceView()
                 .tabItem {
-                    Label("Other", systemImage: "circle")
-                }
-            
-            ISSLocationView()
-                .tabItem {
-                    Label("ISS", systemImage: "house")
+                    Label("Space", systemImage: "moon.stars")
                 }
             
             SpaceNewsView()

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct WeatherModel: Codable {
     let currentConditions: CurrentConditions
@@ -21,6 +22,8 @@ struct CurrentConditions: Codable {
     let moonphase: Double
     let sunrise: String
     let sunset: String
+    let visibility: Double
+    let cloudCover: Double
     
     enum CodingKeys: String, CodingKey {
         case dateTime = "datetime"
@@ -32,5 +35,7 @@ struct CurrentConditions: Codable {
         case moonphase
         case sunrise
         case sunset
+        case visibility
+        case cloudCover = "cloudcover"
     }
 }

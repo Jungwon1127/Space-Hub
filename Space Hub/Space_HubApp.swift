@@ -11,10 +11,7 @@ import SwiftUI
 struct Space_HubApp: App {
         var body: some Scene {
         WindowGroup {
-            NavigationView {
-                HomeView()
-                    .navigationBarHidden(true)
-            }
+            HomeView()
         }
     }
 }

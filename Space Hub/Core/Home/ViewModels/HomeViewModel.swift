@@ -7,7 +7,7 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
-    @Published var currentConditions = CurrentConditions(dateTime: "00:00:00", temp: 0.0, humidity: 0.0, precip: 0.0, conditions: "", icon: "", moonphase: 0.0, sunrise: "", sunset: "")
+    @Published var currentConditions = CurrentConditions(dateTime: "00:00:00", temp: 0.0, humidity: 0.0, precip: 0.0, conditions: "", icon: "", moonphase: 0.0, sunrise: "", sunset: "", visibility: 0.0, cloudCover: 0.0)
     
     func fetchData() {
         guard let url = URL(string: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/los%20angeles?unitGroup=metric&key=R4BGQBP9CZY8LMZYXMHJUSGQC&contentType=json") else {return}
@@ -64,6 +64,26 @@ class HomeViewModel: ObservableObject {
         }
         
         return moonPhase
+    }
+    
+    func stargazingString() -> String {
+        var stargaze: String
+        
+        switch currentConditions.cloudCover {
+        case let x where x == 0.0:
+            stargaze = "perfect for stargazing!"
+        case let x where x > 0.0 && x < 25.0:
+            stargaze = "good for stargazing!"
+        case let x where x >= 25.0 && x < 75.0:
+            stargaze = "getting pretty cloudy."
+        case let x where x >= 75.0 && x <= 100.0:
+            stargaze = "its really cloudy, no stargazing today :("
+        default:
+            stargaze = "where are the clouds?"
+        }
+        
+        
+        return stargaze
     }
     
     func formatTime(time: String) -> String {

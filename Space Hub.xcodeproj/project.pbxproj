@@ -28,6 +28,8 @@
 		5BA3AB852786E1080085A7CF /* MoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3AB842786E1080085A7CF /* MoonView.swift */; };
 		5BA3AB872786F5280085A7CF /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3AB862786F5280085A7CF /* TemperatureView.swift */; };
 		5BA3AB892786F57E0085A7CF /* SunTimeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3AB882786F57E0085A7CF /* SunTimeBar.swift */; };
+		5BA3AB8E27870DE80085A7CF /* SpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3AB8D27870DE80085A7CF /* SpaceView.swift */; };
+		5BA3AB90278712980085A7CF /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3AB8F278712980085A7CF /* Double.swift */; };
 		5BA45DFB276B934D008C7318 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA45DFA276B934D008C7318 /* HomeViewModel.swift */; };
 		5BA45E00276B937A008C7318 /* SpaceNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA45DFF276B937A008C7318 /* SpaceNewsView.swift */; };
 		5BA45E02276B9386008C7318 /* SpaceNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA45E01276B9386008C7318 /* SpaceNewsViewModel.swift */; };
@@ -59,6 +61,8 @@
 		5BA3AB842786E1080085A7CF /* MoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonView.swift; sourceTree = "<group>"; };
 		5BA3AB862786F5280085A7CF /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
 		5BA3AB882786F57E0085A7CF /* SunTimeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTimeBar.swift; sourceTree = "<group>"; };
+		5BA3AB8D27870DE80085A7CF /* SpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceView.swift; sourceTree = "<group>"; };
+		5BA3AB8F278712980085A7CF /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		5BA45DFA276B934D008C7318 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5BA45DFF276B937A008C7318 /* SpaceNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsView.swift; sourceTree = "<group>"; };
 		5BA45E01276B9386008C7318 /* SpaceNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsViewModel.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				5B631AD2273480B700762D27 /* Color.swift */,
+				5BA3AB8F278712980085A7CF /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 		5B631AD42734823100762D27 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5BA3AB8A27870DB80085A7CF /* SpaceView */,
 				5BA45DFC276B9361008C7318 /* Space News */,
 				5B071127276B890200D3B981 /* ISS Location */,
 				5B631ADD2734A35700762D27 /* APOD */,
@@ -242,6 +248,30 @@
 			isa = PBXGroup;
 			children = (
 				5B7C979A2734F790002F7CD2 /* ApodViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5BA3AB8A27870DB80085A7CF /* SpaceView */ = {
+			isa = PBXGroup;
+			children = (
+				5BA3AB8C27870DD90085A7CF /* ViewModels */,
+				5BA3AB8B27870DD00085A7CF /* Views */,
+			);
+			path = SpaceView;
+			sourceTree = "<group>";
+		};
+		5BA3AB8B27870DD00085A7CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BA3AB8D27870DE80085A7CF /* SpaceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BA3AB8C27870DD90085A7CF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -357,6 +387,7 @@
 				5BA45E00276B937A008C7318 /* SpaceNewsView.swift in Sources */,
 				5BA45E02276B9386008C7318 /* SpaceNewsViewModel.swift in Sources */,
 				5B810FE9276B8A38008E2DDD /* SpaceNewsModel.swift in Sources */,
+				5BA3AB90278712980085A7CF /* Double.swift in Sources */,
 				5B6BDDCC274DBCAC00058226 /* ISSLocationDataService.swift in Sources */,
 				5BA45E04276B98C4008C7318 /* SpaceNewsRow.swift in Sources */,
 				5B7C979B2734F790002F7CD2 /* ApodViewModel.swift in Sources */,
@@ -365,6 +396,7 @@
 				5B657F3F2734CF4200A7BE71 /* ApodModel.swift in Sources */,
 				5B1541442784224600F5032A /* WeatherModel.swift in Sources */,
 				5B69D8612785A44900833EEB /* FullMoonView.swift in Sources */,
+				5BA3AB8E27870DE80085A7CF /* SpaceView.swift in Sources */,
 				5B6BDDCA274DB4D600058226 /* ISSLocationViewModel.swift in Sources */,
 				5BACD015274B92BF00305B24 /* ISSLocationView.swift in Sources */,
 				5BA3AB892786F57E0085A7CF /* SunTimeBar.swift in Sources */,
