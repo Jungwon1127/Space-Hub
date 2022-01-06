@@ -21,20 +21,63 @@ struct HomeView: View {
             VStack(alignment: .center) {
                 Text("On \(Date(), style: .date), it is...")
                     .font(.headline)
-                    
                 
                 HStack {
-                    Image(systemName: "moon")
-                    Text("\(farenheight ? (vm.currentConditions.temp * 9/5 + 32) : vm.currentConditions.temp, specifier: "%.1f")")
+
+                    VStack(alignment: .center) {
+                        FullMoonView()
+                            .frame(width: 80)
+
+                        Text(vm.getMoonPhase())
+                            .minimumScaleFactor(0.5)
+                            .frame(width: 80, height: 20)
+                            .multilineTextAlignment(.center)
+                            .font(.headline)
+                    }
+                    .frame(height: 100)
+
+                    Spacer()
+
+
+                    VStack {
+                        Text("\(vm.getTemperature(farenheight: farenheight))")
+                            .font(.system(size: 40))
+
+
+                        Text(vm.currentConditions.conditions)
+                            .font(.headline)
+                    }
+                    .frame(height: 100)
                 }
+                .frame(width: 250, height: 100)
+                .padding()
                 
-                Button(action: {
-                    farenheight.toggle()
-                }) {
-                    Text("Hello!")
+                ZStack {
+                    Color.gray
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Text("Sunrise:")
+                            .font(.headline)
+                        IconTimeView(icon: "sunrise.fill", time: vm.formatTime(time: vm.currentConditions.sunrise))
+                        
+                        Spacer()
+                        
+                        Text("Sunset:")
+                        IconTimeView(icon: "sunset.fill", time: vm.formatTime(time: vm.currentConditions.sunset))
+                        
+                        Spacer()
+
+                    }
                 }
+                .frame(height: 80)
+                .cornerRadius(10)
+                
+                
                 
                 Spacer()
+                
             }
             .frame(maxWidth: .infinity)
             .padding()
@@ -73,10 +116,12 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
             HomeView()
                 .navigationBarHidden(true)
                 .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
-        }
+            
+        HomeView()
+            .preferredColorScheme(.dark)
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
     }
 }

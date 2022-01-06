@@ -27,4 +27,53 @@ class HomeViewModel: ObservableObject {
         }
         task.resume()
     }
+    
+    func getTemperature(farenheight: Bool) -> String {
+        var temp = Measurement(value: currentConditions.temp, unit: UnitTemperature.celsius)
+        let mf = MeasurementFormatter()
+        mf.unitOptions = .providedUnit
+        mf.numberFormatter.maximumFractionDigits = 0
+        
+        if farenheight {
+            temp = temp.converted(to: UnitTemperature.fahrenheit)
+        }
+        
+        
+        
+        return mf.string(from: temp)
+    }
+    
+    func getMoonPhase() -> String {
+        var moonPhase: String
+        
+        switch currentConditions.moonphase {
+        case let x where x == 0.0:
+            moonPhase = "New Moon"
+        case let x where x > 0 && x < 0.5 :
+            moonPhase = "Waxing Crescent"
+        case let x where x == 0.5:
+            moonPhase = "Full Moon"
+        case let x where x > 0.5 && x < 0.75:
+            moonPhase = "Waning Gibbous"
+        case let x where x == 0.75:
+            moonPhase = "Last Quarter"
+        case let x where x > 0.75 && x <= 1:
+            moonPhase = "Waning Crescent"
+        default:
+            moonPhase = "Moon?"
+        }
+        
+        return moonPhase
+    }
+    
+    func formatTime(time: String) -> String {
+        let dfin = DateFormatter()
+        let dfout = DateFormatter()
+        dfin.dateFormat = "HH:mm:ss"
+        dfout.dateFormat = "hh:mm"
+        let time = dfin.date(from: time) ?? Calendar.current.date(from: DateComponents(year: 0000, month: 0, day: 0))!
+        let timeString = dfout.string(from: time)
+        
+        return timeString
+    }
 }
