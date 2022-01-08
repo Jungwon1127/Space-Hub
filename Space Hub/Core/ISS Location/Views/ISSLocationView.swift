@@ -20,7 +20,8 @@ struct ISSLocationView: View {
         
         ZStack {
             
-            Color.theme.background
+            LinearGradient(colors: [Color.theme.background1, Color.theme.background2], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea()
             
             VStack {
                 Map(coordinateRegion: $vm.region, annotationItems: ISS) {

@@ -8,63 +8,35 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var vm = HomeViewModel()
-    @State var farenheight = true
+    @State var selectedTab = "Home"
     
     var body: some View {
-        TabView {
-            ZStack {
-                // Background layer
-                Color.theme.background
-                    .ignoresSafeArea()
-                
-                // Content Layer
-                VStack(alignment: .center) {
-                    Text("On \(Date(), style: .date), it is...")
-                        .font(.headline)
-                    
-                    HStack {
-
-                        MoonView(moonPhase: vm.getMoonPhase())
-
-                        Spacer()
-
-                        TemperatureView(temperature: vm.getTemperature(farenheight: farenheight), condition: vm.currentConditions.conditions)
-                        
-                    }
-                    .frame(width: 250, height: 100)
-                    .padding()
-                    
-                    Text("\(vm.currentConditions.conditions) skys tonight with clouds covering \(vm.currentConditions.cloudCover.removeZerosFromEnd())% of the sky, \(vm.stargazingString())")
-                        .fontWeight(.medium)
-                        .padding()
-                        .multilineTextAlignment(.center)
-                    
-                    SunTimeBar(sunrise: vm.formatTime(time: vm.currentConditions.sunrise), sunset: vm.formatTime(time: vm.currentConditions.sunset))
-                    
-                    Spacer()
-                    
+        TabView(selection: $selectedTab) {
+            WeatherView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
                 }
-                .frame(maxWidth: .infinity)
-                .padding()
-                
-            }
-            .onAppear {
-                vm.fetchData()
-            }
-            .tabItem {
-                Label("Home", systemImage: "house")
-            }
+                .tag("Home")
             
             SpaceView()
                 .tabItem {
-                    Label("Space", systemImage: "moon.stars")
+                    Label {
+                        Text("Space")
+                    } icon: {
+                        Image(systemName: "moon.stars.fill")
+                            .renderingMode(.template)
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(Color.white, Color.yellow)
+                    }
+
                 }
+                .tag("Space")
             
             SpaceNewsView()
                 .tabItem {
                     Label("News", systemImage: "newspaper")
                 }
+                .tag("News")
         }
     }
 }
@@ -72,12 +44,13 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-            HomeView()
-                .navigationBarHidden(true)
-                .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
+        HomeView()
+            .navigationBarHidden(true)
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
             
         HomeView()
             .preferredColorScheme(.dark)
             .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
     }
 }
+

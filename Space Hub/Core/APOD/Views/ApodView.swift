@@ -13,7 +13,7 @@ struct ApodView: View {
     var body: some View {
         ZStack {
             // Background Layer
-            Color.theme.background
+            LinearGradient(colors: [Color.theme.background1, Color.theme.background2], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
             
             // Content Layer

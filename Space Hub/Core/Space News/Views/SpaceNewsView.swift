@@ -11,10 +11,15 @@ struct SpaceNewsView: View {
     @StateObject var vm = SpaceNewsViewModel()
     
     var body: some View {
-        ScrollView {
-            ForEach(vm.SpaceNews) { article in
-                SpaceNewsRow(spaceNews: article)
-                Divider()
+        ZStack {
+            LinearGradient(colors: [Color.theme.background1, Color.theme.background2], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea()
+            
+            ScrollView {
+                ForEach(vm.SpaceNews) { article in
+                    SpaceNewsRow(spaceNews: article)
+                    Divider()
+                }
             }
         }
     }

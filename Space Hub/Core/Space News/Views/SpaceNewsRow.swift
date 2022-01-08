@@ -12,16 +12,18 @@ struct SpaceNewsRow: View {
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
+            Color.white
+            
             AsyncImage(url: URL(string: spaceNews.imageUrl)) { image in
                 image
                     .resizable()
-                    .scaledToFit()
-                    .frame(height: 250)
+                    .scaledToFill()
+                    .frame(maxHeight: 250)
                     .cornerRadius(10)
             } placeholder: {
                 ProgressView()
             }
-            .frame(maxWidth: .infinity, maxHeight: 300)
+            .frame(maxHeight: 300)
             
             VStack(alignment: .leading) {
                 Text(spaceNews.title)
