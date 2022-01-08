@@ -53,4 +53,3 @@ struct HomeView_Previews: PreviewProvider {
             .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
     }
 }
-

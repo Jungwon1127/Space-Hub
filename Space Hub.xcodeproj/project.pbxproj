@@ -38,6 +38,7 @@
 		5BB8F3882789437400553721 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8F3872789437400553721 /* LocationView.swift */; };
 		5BB8F38A2789449400553721 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8F3892789449400553721 /* WeatherView.swift */; };
 		5BB8F38C278944F300553721 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8F38B278944F300553721 /* WeatherViewModel.swift */; };
+		5BB8F38E27895A7C00553721 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8F38D27895A7B00553721 /* LocationManager.swift */; };
 		5BFD38842738C61A00ABECFF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD38832738C61A00ABECFF /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		5BB8F3872789437400553721 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		5BB8F3892789449400553721 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		5BB8F38B278944F300553721 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		5BB8F38D27895A7B00553721 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		5BFD38832738C61A00ABECFF /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				5BFD38832738C61A00ABECFF /* NetworkingManager.swift */,
+				5BB8F38D27895A7B00553721 /* LocationManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				5BA45E00276B937A008C7318 /* SpaceNewsView.swift in Sources */,
 				5BA45E02276B9386008C7318 /* SpaceNewsViewModel.swift in Sources */,
 				5B810FE9276B8A38008E2DDD /* SpaceNewsModel.swift in Sources */,
+				5BB8F38E27895A7C00553721 /* LocationManager.swift in Sources */,
 				5BA3AB90278712980085A7CF /* Double.swift in Sources */,
 				5B6BDDCC274DBCAC00058226 /* ISSLocationDataService.swift in Sources */,
 				5BA45E04276B98C4008C7318 /* SpaceNewsRow.swift in Sources */,
@@ -552,6 +556,7 @@
 				DEVELOPMENT_TEAM = AB9NJB278K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to determine weather and current position.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -582,6 +587,7 @@
 				DEVELOPMENT_TEAM = AB9NJB278K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to determine weather and current position.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
