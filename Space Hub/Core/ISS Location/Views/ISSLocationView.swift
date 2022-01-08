@@ -24,7 +24,7 @@ struct ISSLocationView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Map(coordinateRegion: $vm.region, annotationItems: ISS) {
+                Map(coordinateRegion: $vm.region, showsUserLocation: true, annotationItems: ISS) {
                     MapAnnotation(coordinate: $0.coordinate) {
                         Image("ISS")
                             .resizable()

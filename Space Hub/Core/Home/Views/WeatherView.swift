@@ -56,6 +56,8 @@ struct WeatherView: View {
         }
         .onAppear {
             vm.fetchData()
+            vm.locationManager.checkIfLocationEnabled()
+            print(vm.locationManager.returnLocation())
         }
     }
 }

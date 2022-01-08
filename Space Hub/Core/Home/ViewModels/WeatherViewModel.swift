@@ -10,9 +10,12 @@ import CoreLocation
 
 class WeatherViewModel: ObservableObject {
     @Published var weather = WeatherModel(currentConditions: CurrentConditions(dateTime: "00:00:00", temp: 0.0, humidity: 0.0, precip: 0.0, conditions: "", icon: "", moonphase: 0.0, sunrise: "", sunset: "", visibility: 0.0, cloudCover: 0.0, feelsLike: 0.0), description: "", resolvedAddress: "")
+    
+    var locationManager = LocationManager()
+    
 
     func fetchData() {
-        guard let url = URL(string: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/los%20angeles?unitGroup=metric&key=R4BGQBP9CZY8LMZYXMHJUSGQC&contentType=json") else {return}
+        guard let url = URL(string: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/los%20angeles?unitGroup=metric&key=R4BGQBP9CZY8LMZYXMHJUSGQC&contentType=json") else { return }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, urlresponse, error in
             guard let data = data, error == nil else { return }
             do {

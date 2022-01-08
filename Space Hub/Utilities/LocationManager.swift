@@ -8,18 +8,19 @@
 import Foundation
 import CoreLocation
 
-class LocationManager {
+class LocationManager: NSObject, CLLocationManagerDelegate {
     var locationManager: CLLocationManager?
     
     func checkIfLocationEnabled() {
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
+            locationManager!.delegate = self
         } else {
             print("Show an alert showing them that location services is turned off")
         }
     }
     
-    func checkLocationAuthorization() {
+    private func checkLocationAuthorization() {
         guard let locationManager = locationManager else { return }
         
         switch locationManager.authorizationStatus {
@@ -35,5 +36,14 @@ class LocationManager {
             @unknown default:
                 break
         }
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLocationAuthorization()
+    }
+    
+    func returnLocation() -> CLLocationCoordinate2D? {
+        guard let location = locationManager?.location?.coordinate else { return nil}
+        return location
     }
 }
