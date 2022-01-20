@@ -28,12 +28,16 @@ struct ApodView: View {
                     .frame(height: 30)
                 
                 AsyncImage(url: URL(string: vm.apodData.thumbnailUrl ?? vm.apodData.url)) { image in
-                    image.resizable()
+                    image
+                        .resizable()
+                        .scaledToFit()
                 } placeholder: {
                     ProgressView()
                 }
-                    .frame(maxWidth: .infinity, maxHeight: 250)
+                    .frame(maxWidth: .infinity, maxHeight: 300)
+                    .background(Color.black)
                     .cornerRadius(10)
+                
                 
                 HStack {
                     DatePicker(selection: $vm.date,

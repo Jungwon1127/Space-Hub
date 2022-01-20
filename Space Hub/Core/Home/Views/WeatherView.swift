@@ -12,52 +12,62 @@ struct WeatherView: View {
     @State var farenheight = true
     
     var body: some View {
-        ZStack {
-            // Background layer
-            LinearGradient(colors: [Color.theme.background1, Color.theme.background2], startPoint: .topLeading, endPoint: .bottom)
-                .ignoresSafeArea()
-            
-            
-            // Content Layer
-            VStack(alignment: .center) {
-                Text("On \(Date(), style: .date), it is...")
-                    .font(.headline)
+        NavigationView {
+            ZStack {
+                // Background layer
+                LinearGradient(colors: [Color.theme.background1, Color.theme.background2], startPoint: .topLeading, endPoint: .bottom)
+                    .ignoresSafeArea()
                 
-                LocationView(address: vm.weather.resolvedAddress)
                 
-                HStack {
+                // Content Layer
+                VStack(alignment: .center) {
+                    Text("On \(Date(), style: .date), it is...")
+                        .font(.headline)
                     
-                    MoonView(moonPhase: vm.getMoonPhase())
+                    LocationView(address: vm.locationManager.cityState)
+                    
+                    HStack {
+                        
+                        MoonView(moonPhase: vm.getMoonPhase())
+                        
+                        Spacer()
+                        
+                        TemperatureView(temperature: vm.getTemperature(farenheight: farenheight), condition: vm.weather.currentConditions.conditions)
+                        
+                    }
+                    .frame(width: 250, height: 100)
+                    .padding()
+                    
+                    Text("\(vm.weather.currentConditions.conditions) skys tonight with clouds covering \(vm.weather.currentConditions.cloudCover.removeZerosFromEnd())% of the sky, \(vm.stargazingString())")
+                        .fontWeight(.medium)
+                        .padding()
+                        .multilineTextAlignment(.center)
+                    
+                    SunTimeBar(sunrise: vm.formatTime(time: vm.weather.currentConditions.sunrise), sunset: vm.formatTime(time: vm.weather.currentConditions.sunset))
                     
                     Spacer()
                     
-                    TemperatureView(temperature: vm.getTemperature(farenheight: farenheight), condition: vm.weather.currentConditions.conditions)
-                    
                 }
-                .frame(width: 250, height: 100)
+                .frame(maxWidth: .infinity)
                 .padding()
-                
-                Text("\(vm.weather.currentConditions.conditions) skys tonight with clouds covering \(vm.weather.currentConditions.cloudCover.removeZerosFromEnd())% of the sky, \(vm.stargazingString())")
-                    .fontWeight(.medium)
-                    .padding()
-                    .multilineTextAlignment(.center)
-                
-                SunTimeBar(sunrise: vm.formatTime(time: vm.weather.currentConditions.sunrise), sunset: vm.formatTime(time: vm.weather.currentConditions.sunset))
-                
-                
-                
-                
-                Spacer()
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            farenheight.toggle()
+                        } label: {
+                            Text("C/F")
+                        }
+                    }
+                }
                 
             }
-            .frame(maxWidth: .infinity)
-            .padding()
-            
-        }
-        .onAppear {
-            vm.fetchData()
-            vm.locationManager.checkIfLocationEnabled()
-            print(vm.locationManager.returnLocation())
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                vm.locationManager.checkIfLocationEnabled()
+                vm.locationManager.getLocation()
+                vm.makeURL()
+                vm.fetchData()
+            }
         }
     }
 }

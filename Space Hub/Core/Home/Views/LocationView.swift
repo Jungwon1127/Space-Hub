@@ -14,14 +14,10 @@ struct LocationView: View {
         HStack {
             Image(systemName: "location")
             
-            Button {
-                
-            } label: {
-                Text(address)
-                    .font(.footnote)
-                    .padding()
-            }
-            .background(Capsule().stroke(lineWidth: 1))
+            Text(address)
+                .font(.footnote)
+                .padding(8)
+                .background(Capsule().stroke(lineWidth: 1))
             
             
             

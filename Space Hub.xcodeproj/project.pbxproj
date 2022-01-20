@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5B1541442784224600F5032A /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1541432784224600F5032A /* WeatherModel.swift */; };
-		5B3F684027881D9300100BE0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F683F27881D9300100BE0 /* SwiftUIView.swift */; };
 		5B5452A92734A4C8002E5859 /* ApodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5452A82734A4C8002E5859 /* ApodView.swift */; };
 		5B5452AC2734C1AF002E5859 /* ApodDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5452AB2734C1AF002E5859 /* ApodDataService.swift */; };
 		5B631AC427347D9D00762D27 /* Space_HubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631AC327347D9D00762D27 /* Space_HubApp.swift */; };
@@ -19,6 +18,7 @@
 		5B657F3F2734CF4200A7BE71 /* ApodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B657F3E2734CF4100A7BE71 /* ApodModel.swift */; };
 		5B69D8612785A44900833EEB /* FullMoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69D8602785A44800833EEB /* FullMoonView.swift */; };
 		5B69D8632785A59500833EEB /* HalfMoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69D8622785A59500833EEB /* HalfMoonView.swift */; };
+		5B6AF86E2799B4B500E8A2D6 /* TemperatureConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AF86D2799B4B500E8A2D6 /* TemperatureConversionView.swift */; };
 		5B6BDDC8274DAFA800058226 /* ISSLocationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BDDC7274DAFA800058226 /* ISSLocationModels.swift */; };
 		5B6BDDCA274DB4D600058226 /* ISSLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BDDC9274DB4D600058226 /* ISSLocationViewModel.swift */; };
 		5B6BDDCC274DBCAC00058226 /* ISSLocationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BDDCB274DBCAC00058226 /* ISSLocationDataService.swift */; };
@@ -44,7 +44,6 @@
 
 /* Begin PBXFileReference section */
 		5B1541432784224600F5032A /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
-		5B3F683F27881D9300100BE0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		5B5452A82734A4C8002E5859 /* ApodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodView.swift; sourceTree = "<group>"; };
 		5B5452AB2734C1AF002E5859 /* ApodDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodDataService.swift; sourceTree = "<group>"; };
 		5B631AC027347D9D00762D27 /* Space Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +55,7 @@
 		5B657F3E2734CF4100A7BE71 /* ApodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodModel.swift; sourceTree = "<group>"; };
 		5B69D8602785A44800833EEB /* FullMoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullMoonView.swift; sourceTree = "<group>"; };
 		5B69D8622785A59500833EEB /* HalfMoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfMoonView.swift; sourceTree = "<group>"; };
+		5B6AF86D2799B4B500E8A2D6 /* TemperatureConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConversionView.swift; sourceTree = "<group>"; };
 		5B6BDDC7274DAFA800058226 /* ISSLocationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSLocationModels.swift; sourceTree = "<group>"; };
 		5B6BDDC9274DB4D600058226 /* ISSLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSLocationViewModel.swift; sourceTree = "<group>"; };
 		5B6BDDCB274DBCAC00058226 /* ISSLocationDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ISSLocationDataService.swift; path = ../../../../Downloads/ISSLocationDataService.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 				5BB8F3872789437400553721 /* LocationView.swift */,
 				5BA3AB822786BCBB0085A7CF /* SunTimeView.swift */,
 				5BA3AB842786E1080085A7CF /* MoonView.swift */,
-				5B3F683F27881D9300100BE0 /* SwiftUIView.swift */,
+				5B6AF86D2799B4B500E8A2D6 /* TemperatureConversionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -395,6 +395,7 @@
 				5B6BDDC8274DAFA800058226 /* ISSLocationModels.swift in Sources */,
 				5B5452AC2734C1AF002E5859 /* ApodDataService.swift in Sources */,
 				5BA3AB832786BCBB0085A7CF /* SunTimeView.swift in Sources */,
+				5B6AF86E2799B4B500E8A2D6 /* TemperatureConversionView.swift in Sources */,
 				5BA3AB852786E1080085A7CF /* MoonView.swift in Sources */,
 				5BA45E00276B937A008C7318 /* SpaceNewsView.swift in Sources */,
 				5BA45E02276B9386008C7318 /* SpaceNewsViewModel.swift in Sources */,
@@ -417,7 +418,6 @@
 				5BA3AB872786F5280085A7CF /* TemperatureView.swift in Sources */,
 				5BFD38842738C61A00ABECFF /* NetworkingManager.swift in Sources */,
 				5BB8F3882789437400553721 /* LocationView.swift in Sources */,
-				5B3F684027881D9300100BE0 /* SwiftUIView.swift in Sources */,
 				5B631AC427347D9D00762D27 /* Space_HubApp.swift in Sources */,
 				5B631AD3273480B700762D27 /* Color.swift in Sources */,
 				5B69D8632785A59500833EEB /* HalfMoonView.swift in Sources */,

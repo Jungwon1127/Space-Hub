@@ -24,13 +24,13 @@ struct CurrentConditions: Codable {
     let dateTime: String
     let temp: Double
     let humidity: Double
-    let precip: Double
+    let precip: Double?
     let conditions: String
     let icon: String
     let moonphase: Double
     let sunrise: String
     let sunset: String
-    let visibility: Double
+    let visibility: Double?
     let cloudCover: Double
     let feelsLike: Double
     

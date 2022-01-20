@@ -10,6 +10,7 @@ import CoreLocation
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
     var locationManager: CLLocationManager?
+    var cityState = ""
     
     func checkIfLocationEnabled() {
         if CLLocationManager.locationServicesEnabled() {
@@ -42,8 +43,29 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         checkLocationAuthorization()
     }
     
-    func returnLocation() -> CLLocationCoordinate2D? {
-        guard let location = locationManager?.location?.coordinate else { return nil}
-        return location
+    func getLongLat() -> String {
+        return String(locationManager?.location?.coordinate.latitude ?? 0.0) + "," + String(locationManager?.location?.coordinate.longitude ?? 0.0)
+    }
+    
+    func getLocation() {
+        guard let location = locationManager?.location else { return }
+                
+        let geocoder = CLGeocoder()
+        
+        geocoder.reverseGeocodeLocation(location) { [weak self] placemarks, error in
+            guard let self = self else { return }
+
+            if let _ = error {
+                return
+            }
+                        
+            guard let placemark = placemarks?.first else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.cityState = "\(placemark.locality ?? "No City"), \(placemark.administrativeArea ?? "No State")"
+            }
+        }
     }
 }

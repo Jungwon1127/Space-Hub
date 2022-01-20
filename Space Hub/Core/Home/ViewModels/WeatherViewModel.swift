@@ -12,10 +12,11 @@ class WeatherViewModel: ObservableObject {
     @Published var weather = WeatherModel(currentConditions: CurrentConditions(dateTime: "00:00:00", temp: 0.0, humidity: 0.0, precip: 0.0, conditions: "", icon: "", moonphase: 0.0, sunrise: "", sunset: "", visibility: 0.0, cloudCover: 0.0, feelsLike: 0.0), description: "", resolvedAddress: "")
     
     var locationManager = LocationManager()
+    var components = URLComponents()
     
-
     func fetchData() {
-        guard let url = URL(string: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/los%20angeles?unitGroup=metric&key=R4BGQBP9CZY8LMZYXMHJUSGQC&contentType=json") else { return }
+        guard let url = components.url else { return }
+        print(url)
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, urlresponse, error in
             guard let data = data, error == nil else { return }
             do {
@@ -30,18 +31,26 @@ class WeatherViewModel: ObservableObject {
         task.resume()
     }
     
+    func makeURL() {
+        let queryItemApiKey = URLQueryItem(name: "key", value: "R4BGQBP9CZY8LMZYXMHJUSGQC")
+        
+        components.scheme = "https"
+        components.host = "weather.visualcrossing.com"
+        components.path = "/VisualCrossingWebServices/rest/services/timeline/" + locationManager.getLongLat()
+        components.queryItems = [queryItemApiKey]
+    }
+    
     func getTemperature(farenheight: Bool) -> String {
-        var temp = Measurement(value: weather.currentConditions.temp, unit: UnitTemperature.celsius)
+        var temp = Measurement(value: weather.currentConditions.temp, unit: UnitTemperature.fahrenheit)
         let mf = MeasurementFormatter()
         mf.unitOptions = .providedUnit
         mf.numberFormatter.maximumFractionDigits = 0
         
         if farenheight {
-            temp = temp.converted(to: UnitTemperature.fahrenheit)
+            temp = temp.converted(to: UnitTemperature.celsius)
         }
         
-        
-        
+        print("is farenheight: \(farenheight)")
         return mf.string(from: temp)
     }
     
