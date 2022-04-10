@@ -1,5 +1,5 @@
 # Space-Hub
-A mobile app built natively on IOS, Space hub is a personal project made for space enthusiasts who want to know the most up to date news, the users local weather, the current moonphase, current location of the ISS, and more. If there any other things that you think would be good to add as well as any recommendations for better UI, contact me through jungwon1127@gmail.com
+A mobile app built natively on IOS, Space hub is a personal project made for space enthusiasts who want to know the most up to date news, the users local weather, the current moonphase, current location of the ISS, and more. This app is a work in progres and if there any other things that you think would be good to add as well as any recommendations for better UI, contact me through jungwon1127@gmail.com. 
 
 Built entirely in SwiftUI.
 
